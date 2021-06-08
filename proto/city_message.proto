@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package cities;
+option go_package = ".;cities";
+
+message Cities {
+  repeated City city = 1;
+}
+
+message City {
+  int32 id = 1;
+  string name = 2;
+}

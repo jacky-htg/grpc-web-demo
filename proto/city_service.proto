@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package cities;
+option go_package = ".;cities";
+
+import "city_message.proto";
+import "generic_message.proto";
+
+service CitiesService {
+  rpc List(EmptyMessage) returns (Cities) {}
+}
